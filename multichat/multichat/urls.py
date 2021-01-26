@@ -6,7 +6,8 @@ from frontend.views import vue_index
 
 
 urlpatterns = [
-    path('', vue_index),
+    path('', index),
+    path('ws/', vue_index),
     path('accounts/login/', LoginView.as_view(), name='login'),
     path('accounts/logout/', LogoutView.as_view(), name='logout'),
     path('admin/', admin.site.urls),

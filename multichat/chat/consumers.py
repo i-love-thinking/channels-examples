@@ -23,12 +23,12 @@ class ChatConsumer(AsyncJsonWebsocketConsumer):
         Called when the websocket is handshaking as part of initial connection.
         """
         # Are they logged in?
-        # if self.scope["user"].is_anonymous:
-        #     # Reject the connection
-        #     await self.close()
-        # else:
+        if self.scope["user"].is_anonymous:
+            # Reject the connection
+            await self.close()
+        else:
             # Accept the connection
-        await self.accept()
+            await self.accept()
         # Store which rooms the user has joined on this connection
         self.rooms = set()
 

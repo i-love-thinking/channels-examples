@@ -137,7 +137,7 @@ DATABASES = {
 # Deliberately turned off for this example.
 AUTH_PASSWORD_VALIDATORS = []
 
-LOGIN_REDIRECT_URL = "/"
+LOGIN_REDIRECT_URL = "/ws/"
 
 
 # Internationalization
