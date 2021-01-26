@@ -120,6 +120,8 @@ class ChatConsumer(AsyncJsonWebsocketConsumer):
         # Instruct their client to finish closing the room
         await self.send_json({
             "leave": str(room.id),
+            "title": room.title,
+
         })
 
     async def send_room(self, room_id, message):

@@ -117,7 +117,8 @@ TEMPLATES = [
 ]
 
 
-WSGI_APPLICATION = 'multichat.wsgi.application'
+# WSGI_APPLICATION = 'multichat.wsgi.application'
+ASGI_APPLICATION = 'multichat.asgi.application'
 
 
 # Database
